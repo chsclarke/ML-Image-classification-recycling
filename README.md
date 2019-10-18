@@ -2,7 +2,7 @@
 repository for ME360 Final Project
 
 AWS userpass:
-U: cfclarke@bu.edu
+U: cfclarke@bu.edu \
 P: TrashJunkies360
 
 
