@@ -8,7 +8,7 @@ P: TrashJunkies360
 
 ### After RPi boot:
 Start up aws greengrass:
-`$ cd /greengrass/ggc/core/
+`$ cd /greengrass/ggc/core/  
 $ sudo ./greengrassd start` 
 
 check if running correctly:
