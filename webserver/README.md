@@ -9,5 +9,6 @@ cd into `imgtest`
 will send a file to webserver, it will classify it and return its ML guess
 
 
-TODO: change curl request to something more useable
+TODO: change curl request to something more useable 
+
 TODO: change response format to something more usable
