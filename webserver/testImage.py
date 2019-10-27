@@ -72,8 +72,8 @@ def load_labels(label_file):
 
 def get_classification():
   file_name = "img.jpg"
-  model_file = "tensorflow/tf_files/retrained_graph.pb"
-  label_file = "tensorflow/tf_files/retrained_labels.txt"
+  model_file = "model/retrained_graph.pb"
+  label_file = "model/retrained_labels.txt"
   input_height = 224
   input_width = 224
   input_mean = 128
