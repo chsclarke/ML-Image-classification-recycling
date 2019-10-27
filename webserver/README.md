@@ -1,3 +1,6 @@
+Install tensorflow with the following command:
+`pip install --upgrade "tensorflow==1.7.*"`
+
 run webserver with:
 
 `python3 app.py`
