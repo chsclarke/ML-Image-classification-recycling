@@ -39,7 +39,7 @@ def load_graph(model_file):
   return graph
 
 def read_tensor_from_image_file(file_name, input_height=299, input_width=299,
-				input_mean=0, input_std=255):
+                input_mean=0, input_std=255):
   input_name = "file_reader"
   output_name = "normalized"
   file_reader = tf.read_file(file_name, input_name)
@@ -72,8 +72,8 @@ def load_labels(label_file):
 
 def get_classification():
   file_name = "img.jpg"
-  model_file = "tensorflow/tf_files/retrained_graph.pb"
-  label_file = "tensorflow/tf_files/retrained_labels.txt"
+  model_file = "tensorflow/retrained_graph.pb"
+  label_file = "tensorflow/retrained_labels.txt"
   input_height = 224
   input_width = 224
   input_mean = 128

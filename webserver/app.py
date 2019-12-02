@@ -1,4 +1,5 @@
 import os
+import subprocess
 from PIL import Image
 from flask import Flask, request, abort, jsonify, send_from_directory
 
@@ -24,9 +25,20 @@ def home():
     myCmd = os.popen('python3 testImage.py').read()
     return myCmd
 
+@api.route("/takePhoto", methods=["GET", "POST"])
+def snapshot():
+    os.system("raspistill -o img.jpg")
+    # os.system("curl -F 'file=@img.jpg' http://168.122.223.130:8000/send")
+    output = subprocess.run(['python3', 'testImage.py'], stdout=subprocess.PIPE).stdout.decode('utf-8')
+    return output
+
+@api.route("/processPhoto", methods=["GET", "POST"])
+def analyzePhoto():
+    os.system("python3 testImage.py")
+    return ("Image processed, returning results!\n")
 
 if __name__ == "__main__":
-    api.run(debug=True, port=8000)
+    api.run(debug=True, host='0.0.0.0', port=8000)
 
 """
 from flask import Flask
