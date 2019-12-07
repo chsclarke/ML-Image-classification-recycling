@@ -8,14 +8,11 @@ UPLOAD_DIRECTORY = "/"
 if not os.path.exists(UPLOAD_DIRECTORY):
     os.makedirs(UPLOAD_DIRECTORY)
 
-
 api = Flask(__name__)
-
 
 @api.route("/")
 def list_files():
     return "heyo"
-
 
 @api.route("/send", methods=["POST"])
 def home():
@@ -24,9 +21,8 @@ def home():
     myCmd = os.popen('python3 testImage.py').read()
     return myCmd
 
-
 if __name__ == "__main__":
-    api.run(debug=True, port=8000)
+    api.run(debug=True, host="0.0.0.0", port=8000)
 
 """
 from flask import Flask
