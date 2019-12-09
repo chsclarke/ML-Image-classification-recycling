@@ -1,0 +1,4 @@
+# Ignore Virtual Environment dependencies
+
+/venv
+

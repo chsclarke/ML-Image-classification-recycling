@@ -22,7 +22,7 @@ camera.stop_preview()
 # Part 1: Take a photo and save as 'image.jpg'
 print("[!!!] Taking Photo . . .")
 # os.system("raspistill -o image.jpg")
-os.system("curl http://128.197.180.252:8000/takePhoto")
+os.system("curl http://128.197.136.204:8000/takePhoto")
 print("[~~~] Photo Taken ")
 
 # Part 2.1: Send the image over a curl request to receive results from ML
@@ -31,5 +31,5 @@ print("[~~~] Photo Taken ")
 
 # Part 2.2: Instead of sending an image, tell server to grab taken image stored locally
 print("[!!!] Processing local photo . . .")
-os.system("curl http://128.197.180.252.8000/processPhoto")
+os.system("curl http://128.197.136.204.8000/processPhoto")
 print("[~~~] Returning ML results")
