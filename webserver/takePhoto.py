@@ -1,14 +1,14 @@
-# from picamera import PiCamera
-# from time import sleep
+from picamera import PiCamera
+from time import sleep
 import os
 
-'''
+
 camera = PiCamera()
 camera.start_preview()
-sleep(5)
+sleep(15)
 camera.capture('picture.jpg')
 camera.stop_preview()
-'''
+
 
 
 '''
@@ -18,7 +18,7 @@ camera.stop_preview()
     Should then return result back to the user e.g. at the laptop
 '''
 
-
+'''
 # Part 1: Take a photo and save as 'image.jpg'
 print("[!!!] Taking Photo . . .")
 # os.system("raspistill -o image.jpg")
@@ -32,4 +32,4 @@ print("[!!!] Sending photo to web server . . .")
 # Part 2.2: Instead of sending an image, tell server to grab taken image stored locally
 os.system("curl http://128.197.180.252.8000/processPhoto")
 print("[~~~] Returning ML results")
-
+'''

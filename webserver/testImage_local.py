@@ -18,11 +18,14 @@ from __future__ import print_function
 
 import argparse
 import sys
-import os
 import time
 
 import numpy as np
 import tensorflow as tf
+
+from flask import Flask
+app = Flask(__name__)
+
 
 def load_graph(model_file):
   graph = tf.Graph()
@@ -68,10 +71,10 @@ def load_labels(label_file):
   return label
 
 def get_classification():
-  file_name = "/home/pi/Documents/ML-Image-classification-recycling/motion_sensor/picam/image.jpg"
+  file_name = "picture.jpg"
   #file_name = 'img.jpg'
-  model_file = "../webserver/tensorflow/retrained_graph.pb"
-  label_file = "../webserver/tensorflow/retrained_labels.txt"
+  model_file = "retrained_graph.pb"
+  label_file = "retrained_labels.txt"
   input_height = 224
   input_width = 224
   input_mean = 128
@@ -116,19 +119,9 @@ def get_classification():
   #print('\nEvaluation time (1-image): {:.3f}s\n'.format(end-start))
   template = "{} (score={:0.5f})"
 
-  
-  materialDict = {'trash': 0, 'glass': 1, 'plastic': 2, 'metal': 3}
   retVar = ""
-  maxResult = 0
-  maxString = ""
   for i in top_k:
     retVar += (template.format(labels[i], results[i])) + "\n"
-    if float(results[i]) > maxResult:
-        maxResult = float(results[i])
-        maxString = labels[i]
-
-  return materialDict[maxString]
-
+  return retVar
 
 print(get_classification())
-
