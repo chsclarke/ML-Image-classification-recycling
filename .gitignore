@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 # Ignore Virtual Environment dependencies
 
 /venv
 
+=======
+# Ignore the virtual environment
+/venv
+>>>>>>> 9a0ee4467f15d6b9dccb067cdd74ece47191053a
