@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-# ME360 Final Project
-
-Flask webserver that recieves a jpg photo and returns a classification.
-
-repository for ME360 Final Project -- currently in progress. Roughly 90% accuracy at this point.
-=======
 # ME360 Final Project
 
 Flask webserver that recieves a jpg photo and returns a classification.
@@ -30,4 +23,3 @@ Our second choice was a tutorial from The Zan Show called ["Tutorial 15: Detect 
 
 1. This tutorial was published in 2015 and was not updated since then as the author believed the main principles were still relevant. However, the program was designed in Python 2 while our entire code repository was programmed using Python 3.
 2. Once the code was modified to use Python 3, we were able to successfully run the program which detected motion and then took 5 pictures. However, in our implementation, we will only need one picture. 
->>>>>>> 9a0ee4467f15d6b9dccb067cdd74ece47191053a
